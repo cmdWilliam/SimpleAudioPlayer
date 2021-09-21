@@ -13,12 +13,12 @@ Look and feel was changed and JS simplified and adapted to handle multiple playe
 
 
 ## Import into your page by adding:
+Links
 ```HTML
 <link rel="stylesheet" href="/css/audioPlayerCss.css">
 <script type="module" src="/js/audioPlayerJS.js"></script>
 ```
-
-## Player:
+Player
 ```HTML
 <div id="playerId_1" class="audioPlayer">
     <audio src="/docs/HighCloudRingOfMystery.mp3" preload="metadata" loop></audio>
@@ -52,5 +52,6 @@ Colors are altered by changing the audioPlayer css.
 Positioning the Slider can also be changed in the css.
 
 ## TODOs
-Handle audio description better... for now, it is left blank.
-Make it easier to customise the position of the slider.
+1. Handle audio description better... for now, it is left blank.
+
+2. Make it easier to customise the position of the slider.
