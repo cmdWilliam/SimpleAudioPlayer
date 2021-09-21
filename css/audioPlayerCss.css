@@ -1,0 +1,190 @@
+.audioPlayer {        
+    --seek-before-width: 0%;
+    --volume-before-width: 100%;
+    --buffered-width: 0%;
+    --audioPlayButtonColor:#fff;
+    --audioPlayerBorderColor:#C51818;
+    --audioPlayerSlider:rgba(197,24,24,0.6);
+    --audioPlayerSliderBufferColor:rgba(197,24,24,0.2);
+
+
+    position: relative;
+    width: 20vw;
+    max-width: 60px;
+    height: 20vw;
+    max-height: 60px;
+    background: transparent;
+    background-color: #5a5a5a;
+    border-radius: 45px;
+    border-style: solid;
+    border-color: var(--audioPlayerBorderColor);
+    border-width: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -0.5px;
+}
+button.audioButton {
+    border: 0; 
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    float: left;
+}
+.audioPlayer::before {
+    position: absolute;
+    content: '';
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    left: -2px;
+    top: -2px;
+    z-index: -1;
+}
+p.audioDescription {
+    position: absolute;
+    top: -18px;
+    right: 5%;
+    padding: 0 5px;
+    margin: 0;
+    font-size: 28px;
+    background: #fff;
+}
+#play-icon {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.audioPlayer path {
+    stroke: var(--audioPlayButtonColor);
+    stroke-width: 3;
+}
+.audioTime {
+    display: inline-block;
+    width: 37px;
+    text-align: center;
+    font-size: 20px;
+    margin: 28.5px 0 18.5px 0;
+}
+.audioOutput {
+    display: inline-block;
+    width: 32px;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 2.5% 0 5%;
+    clear: left;
+}
+#volume-slider {
+    margin: 10px 2.5%;
+    width: 58%;
+}
+#volume-slider::-webkit-slider-runnable-track {
+    background: var(--audioPlayerSlider);
+}
+#volume-slider::-moz-range-track {
+    background: var(--audioPlayerSlider);
+}
+#volume-slider::-ms-fill-upper {
+    background: var(--audioPlayerSlider);
+}
+#volume-slider::before {
+    width: var(--volume-before-width);
+}
+#mute-icon {
+    margin: 0 2.5%;
+}
+.audioRange {
+    position: absolute;
+    left: -30%;
+    top: 125%;
+    -webkit-appearance: none;
+    background-color: transparent;
+    width: 160%;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+.audioRange::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;    
+    background: linear-gradient(to right,  var(--audioPlayerSlider) var(--buffered-width), var(--audioPlayerSliderBufferColor) var(--buffered-width));
+}
+.audioRange::before {
+    position: relative;
+    content: "";
+    top: 8px;
+    left: 0;
+    width: var(--seek-before-width);
+    height: 3px;
+    background-color: var(--audioPlayerBorderColor);
+    cursor: pointer;
+}
+.audioRange::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    border: 1px solid var(--audioPlayerBorderColor);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--audioPlayerBorderColor);
+    cursor: pointer;
+    margin: -7px 0 0 0;
+}
+.audioRange:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    background: var(--audioPlayerBorderColor);
+}
+.audioRange::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: linear-gradient(to right,  var(--audioPlayerSlider) var(--buffered-width), var(--audioPlayerSliderBufferColor) var(--buffered-width));
+}
+.audioRange::-moz-range-progress {
+    background-color: var(--audioPlayerBorderColor);
+}
+.audioRange::-moz-focus-outer {
+    border: 0;
+}
+.audioRange::-moz-range-thumb {
+    box-sizing: content-box;
+    border: 1px solid var(--audioPlayerBorderColor);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+.audioRange:active::-moz-range-thumb {
+    transform: scale(1.2);
+    background: var(--audioPlayerBorderColor);
+}
+.audioRange::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: transparent;
+    border: solid transparent;
+    color: transparent;
+}
+.audioRange::-ms-fill-lower {
+    background-color: var(--audioPlayerBorderColor);
+}
+.audioRange::-ms-fill-upper {
+    background: linear-gradient(to right,  var(--audioPlayerSlider) var(--buffered-width), var(--audioPlayerSliderBufferColor) var(--buffered-width));
+}
+.audioRange::-ms-thumb {
+    box-sizing: content-box;
+    border: 1px solid var(--audioPlayerBorderColor);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+.audioRange:active::-ms-thumb {
+    transform: scale(1.2);
+    background: var(--audioPlayerBorderColor);
+}
