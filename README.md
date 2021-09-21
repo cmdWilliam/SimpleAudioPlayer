@@ -8,16 +8,18 @@
 ![Player Playing](docs/PlayerPlaying.JPG)
 
 ## Thank yous:
-Some parts of this was copied from somewhere, cannot now recall.
-I adapted it to handle multiple players on a single page and simplified the js.
+Some parts of this was copied from somewhere, but unfortunately I cannot recall.
+Look and feel was changed and JS simplified and adapted to handle multiple players on a single page.
 
 
 ## Import into your page by adding:
+```HTML
 <link rel="stylesheet" href="/css/audioPlayerCss.css">
 <script type="module" src="/js/audioPlayerJS.js"></script>
-
+```
 
 ## Player:
+```HTML
 <div id="playerId_1" class="audioPlayer">
     <audio src="/docs/HighCloudRingOfMystery.mp3" preload="metadata" loop></audio>
     <p class="audioDescription"></p>
@@ -30,9 +32,11 @@ I adapted it to handle multiple players on a single page and simplified the js.
     <button hidden class="audioButton" id="mute-icon"></button>
     </div>      
 </div>
+```
 
 ## Customising
 Colors are altered by changing the audioPlayer css.
+```CSS
 .audioPlayer{ 
     --seek-before-width: 0%;
     --volume-before-width: 100%;
@@ -42,6 +46,8 @@ Colors are altered by changing the audioPlayer css.
     --audioPlayerSlider:rgba(197,24,24,0.6);
     --audioPlayerSliderBufferColor:rgba(197,24,24,0.2);
 } 
+```
+
 
 Positioning the Slider can also be changed in the css.
 
