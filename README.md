@@ -1,7 +1,7 @@
 # SimpleAudioPlayer
  A simple clean audio player
 
- No external plug ins
+ No external plug-ins
  CSS and JS only
 
 ![Player Stopped](docs/PlayerStopped.JPG)
